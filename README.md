@@ -34,8 +34,8 @@ Book from October 2018 to October 2026 (2,016 days), risk forecasts from October
 
 Historical simulation fails coverage, and in the crisis its 9 exceptions cluster (Christoffersen p = 0.012).
 A window of 250 days reacts late when volatility jumps. Filtered simulation was expected to fix this and did
-not: it does better in the crisis (6 exceptions) but worse afterward (17 against 9 expected), when it scales
-returns down too quickly. Delta-normal passes all tests here, though the sample holds a book with little
+not: it does better in the crisis (6 exceptions) but worse afterward (17 against 9 expected), apparently because
+it scales past returns down when volatility falls. Delta-normal passes all tests here, though the sample holds a book with little
 gamma, and on exception days the realized loss was 1.31 times its expected shortfall, as with the other models
 (1.25 to 1.29), so all of them understate the tail beyond VaR.
 
@@ -45,7 +45,7 @@ Delta explains most of the P&L (mean absolute 249 kEUR per day), then time decay
 (30), gamma (12), vega (7) and the level of the curve (6). Unexplained is 4 kEUR, 0.06% of the variance. The
 largest gap was on 29 August 2022: a loss of 7.7 MEUR, with 236 kEUR unexplained after a 20% fall.
 
-The Basel-style test (Spearman 0.99, KS 0.005) is green, but this proves little. Marks and sensitivities come
+The Basel-style test (Spearman above 0.99, KS 0.005) is green, but this proves little. Marks and sensitivities come
 from one model, so the test only measures the quality of the Taylor expansion. A real desk would fail on factors
 the model leaves out, such as basis and independent curve moves.
 
@@ -71,7 +71,7 @@ only at month start, so the limit still fails within a month.
 ### Pricing checks
 
 - **Kirk against Monte Carlo:** four cases with 400,000 antithetic paths: within 1.5 standard errors, and Kirk
-  is lower in all four by 0.3% to 0.8% at most, so the gap is small but one-sided.
+  is lower in all four, by 0.05% to 0.8%, so the gap is small but one-sided.
 - **Swing by LSMC,** one month of daily rights at the money, volatility 80%, mean reversion 2.9: with all 30
   rights 52.11 (standard error 0.35) against the exact strip of calls 52.30; one right 2.61 against the best
   single call 2.44. The value of a right falls from 2.61 to 1.74 as rights increase.
@@ -89,4 +89,4 @@ credit risk. The swing is not part of the daily book. Never a substitute for an 
 ## Run
 
 `pip install -e ".[test]"`, `pytest` (offline, synthetic data), `python scripts/run_study.py` (downloads TTF=F
-to `data/`, which is not committed; about 15 minutes on one core).
+to `data/`, which is not committed; under half an hour on one core).
