@@ -1,0 +1,5 @@
+case,kirk,monte_carlo,std_error,z
+calendar spread,1.183,1.1861,0.0027,-1.1311
+"spark spread, heat rate applied",19.2095,19.2434,0.0265,-1.2808
+deep in the money,25.0794,25.0909,0.0106,-1.0901
+"out of the money, low correlation",5.2819,5.3226,0.0282,-1.4441

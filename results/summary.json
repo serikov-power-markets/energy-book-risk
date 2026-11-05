@@ -1,0 +1,83 @@
+{
+  "sample": [
+    "2018-10-22",
+    "2026-10-28"
+  ],
+  "attribution": {
+    "all": {
+      "days": 2016,
+      "spearman": 0.9999706148921688,
+      "ks": 0.0054563492063492425,
+      "zone": "green",
+      "unexplained_share_of_variance": 0.0005521469762598365,
+      "mean_abs_pnl": 257305.49372224163,
+      "mean_abs_unexplained": 4214.48689377975,
+      "worst_unexplained": 236410.40635838918
+    },
+    "before crisis": {
+      "days": 719,
+      "spearman": 0.9999586757115204,
+      "ks": 0.009735744089012538,
+      "zone": "green",
+      "unexplained_share_of_variance": 0.0005935553315474697,
+      "mean_abs_pnl": 63625.26785847662,
+      "mean_abs_unexplained": 965.1164260023992,
+      "worst_unexplained": 40020.134841367486
+    },
+    "crisis": {
+      "days": 398,
+      "spearman": 0.9999577440620651,
+      "ks": 0.01507537688442211,
+      "zone": "green",
+      "unexplained_share_of_variance": 0.0005741651585372494,
+      "mean_abs_pnl": 789110.6594571603,
+      "mean_abs_unexplained": 15059.662942280824,
+      "worst_unexplained": 236410.40635838918
+    },
+    "after crisis": {
+      "days": 899,
+      "spearman": 0.9999655643117444,
+      "ks": 0.008898776418242549,
+      "zone": "green",
+      "unexplained_share_of_variance": 0.00035493081345233516,
+      "mean_abs_pnl": 176768.92690750243,
+      "mean_abs_unexplained": 2011.9477380828503,
+      "worst_unexplained": 106690.96138420445
+    }
+  },
+  "mean_abs_attribution_keur": {
+    "delta": 249.4,
+    "gamma": 11.5,
+    "vega": 6.6,
+    "theta": 29.7,
+    "curve": 5.6,
+    "unexplained": 4.2
+  },
+  "limits": {
+    "var_limit_eur": 226170.97550557,
+    "days_var_breach": 1383,
+    "delta_limit_mwh": 150000.0,
+    "days_delta_breach": 408,
+    "stop_loss_eur": 678512.9265167101,
+    "days_stop_breach": 304,
+    "months_with_stop_breach": 27,
+    "days_tested": 1766
+  },
+  "limit_experiment": {
+    "no_limit": {
+      "sum_eur": 37094736.2375631,
+      "std_day_eur": 605011.8118056993,
+      "worst_day_eur": -7690800.742412817,
+      "worst_month_eur": -10010506.998265745
+    },
+    "scaled_monthly_to_var_limit": {
+      "sum_eur": 13622676.480722498,
+      "std_day_eur": 107866.18037867364,
+      "worst_day_eur": -677581.7597986992,
+      "worst_month_eur": -933197.9144386315
+    }
+  },
+  "forecast_start": "2019-10-22",
+  "swing_strip_of_calls": 52.30108262910309,
+  "swing_best_single_call": 2.4438401421600506
+}
