@@ -9,7 +9,7 @@ A research study on the public TTF front-month series, not a production system o
 Only the front-month price is observed (Yahoo TTF=F, October 2017 on). There is no open archive of forward
 curves or option prices, so the rest is constructed:
 - **Curve:** near maturities follow the front month and far ones move less, with the mean reversion from
-  [eu-gas-storage-valuation](https://github.com/michaelserikov/eu-gas-storage-valuation), a seasonal shape
+  [eu-gas-storage-valuation](https://github.com/serikov-power-markets/eu-gas-storage-valuation), a seasonal shape
   and the mean price of the past year as the long-run level.
 - **Volatility:** EWMA of front-month returns (lambda 0.97), reduced with maturity, floor 20%. It stands in
   for implied volatility.
